@@ -1,0 +1,168 @@
+*,
+*::before, 
+*::after{
+/* 1️⃣Empêche le padding et border d'affecter la largeur/hauteur */    
+    box-sizing: border-box;
+}            
+/* 2️⃣ Supprimer les marges et paddings par défaut */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/* 3️⃣ Supprimer la décoration des listes et liens */
+ul, ol {
+    list-style: none; /* Supprime les puces des listes */
+}
+
+a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: inherit; /* Les liens prennent la couleur du texte parent */
+}
+
+/* 4️⃣ Assurer une typographie cohérente */
+body {
+    font-family: 'poppins', Arial, sans-serif; /* Change selon le projet */
+    font-size: 16px; /* Base cohérente */
+    line-height: 1.5; /* Espacement optimal entre les lignes */
+}
+
+/* 5️⃣ Éviter les débordements sur petits écrans */
+html, body {
+    width: 100%; 
+    overflow-x: hidden;/* Empêche les barres de scroll horizontales */
+    scroll-behavior: smooth;
+}
+
+/* 6️⃣ Améliorer l'accessibilité et le focus */
+button, input, textarea {
+    font-family: inherit; /* Garde la même police que le reste du site */
+}
+:focus {
+    outline: none; /* Supprime l’outline par défaut (attention à ajouter un style focus personnalisé) */
+}
+/* 
+🔧📌 ADAPTATIONS POSSIBLES (5% des cas) 🔧📌
+
+1️⃣ FONTES → Si le projet a une charte stricte, remplace `font-family: Arial, sans-serif;` 
+   Ex: `font-family: 'Roboto', sans-serif;`
+
+2️⃣ FOCUS → Pour l'accessibilité, personnalise le `outline` au lieu de le supprimer.
+   Ex: `:focus { outline: 2px solid #ff385c; border-radius: 5px; }`
+
+3️⃣ SCROLL HORIZONTAL → Si le site utilise des carrousels ou tableaux larges, 
+   supprime `overflow-x: hidden;` de `html, body`.
+
+4️⃣ LISTES → Si tu veux garder des puces sur certains `ul`, applique `list-style: disc;` 
+   uniquement aux listes concernées.
+
+5️⃣ FORMULAIRES → Pour styliser les inputs et boutons de manière homogène,
+   ajuste `button, input, textarea` selon le design du projet.
+
+💡 👉 Ces modifications ne sont à faire que si nécessaires, sinon la base couvre 95% des besoins !
+
+ PATTERN MAIL: pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,15}"
+               + aria-required="true" (oblig + vocalisé) */
+/* 
+███████████████████████████████████████████████████████████████████████
+            🎯🎯🎯 FIN DU COMMENTAIRE - REPÈRE VISUEL 🎯🎯🎯
+███████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████
+*/
+
+/*  body: min-height:100vh pour la plupart des cas 
+    sinon height: 100vh  */
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #3f3d3d;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+.fenetre {
+    border: 3px solid black;
+    width: 600px;
+    height: 800px;
+    background-color: rgb(180, 177, 147);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 50px 0 0 10px;
+}
+
+.bloc-statut {
+    width: 290px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.bloc-statut div:not(.barre-vie) {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2px;
+    border-radius: 4px;
+    font-size: 1.5rem;
+}
+
+.health {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vert {
+    background-color: rgb(12, 47, 12);
+    color: rgb(34, 255, 34);
+}
+
+.rouge {
+    background-color: rgb(51, 10, 8);
+    color: rgb(255, 59, 59);
+}
+
+.jaune {
+    background-color: rgb(49, 49, 12);
+    color: rgb(255, 255, 68);
+}
+
+.h {
+    font-size: 1rem;
+    color: black;
+    margin-right: 10px;
+}
+
+.barre-vie {
+    background-color: rgb(7, 7, 210);
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    
+}
+
+.barre-vie p {
+    font-size: 1rem;
+    text-align: center;
+}
