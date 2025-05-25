@@ -97,14 +97,13 @@ body {
 
 .fenetre {
     width: 600px;
-    height: 800px;
     background-color: #f1f1e6;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 10px 10px 0 10px;
+    padding: 10px 10px 10px 10px;
     box-shadow: 0 4px 4px rgba(0,0,0,0.1), 0 8px 8px rgba(0,0,0,0.1), 0 16px 16px rgba(0,0,0,0.1);
 }
 
@@ -113,7 +112,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 210px;
+    min-height: 210px;
 }
 
 .barre-titre {
@@ -303,5 +302,53 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.contain-partie-basse {
+    width: 100%;
+    height: 310px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 11px;
+}
+
+.bloc1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #263a45;
+}
+
+.bloc2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #263a45;
+}
+
+.tableau1 {
+    border: 2px solid #010101;
+    width: 100%;
+    height: 100%;
+}
+
+.tableau2 {
+    border: 2px solid #010101;
+    width: 100%;
+    height: 100%;
+}
+
+.ajusti {
+    align-self: flex-start;
+    margin-left: 5px;
+}
+
 
 
