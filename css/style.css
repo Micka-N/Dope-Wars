@@ -78,7 +78,7 @@ button, input, textarea {
 body {
     height: 100vh;
     width: 100%;
-    background-color: #3f3d3d;
+    background-color: #1A2B32;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -91,16 +91,56 @@ body {
 }
 
 .fenetre {
-    border: 3px solid black;
     width: 600px;
     height: 800px;
-    background-color: rgb(180, 177, 147);
+    background-color: #8F7A62;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 50px 0 0 10px;
+    padding: 10px 10px 0 10px;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.1), 0 8px 8px rgba(0,0,0,0.1), 0 16px 16px rgba(0,0,0,0.1);
+}
+
+.contain-partie-haute {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.barre-titre {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.image-et-titre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#logo-calendar {
+    width: 32px;
+}
+
+.calendar {
+    color: #1A2B32;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#titre-jeu {
+    color: #253A44;
+    
 }
 
 .bloc-statut {
@@ -108,7 +148,7 @@ body {
     height: 280px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
@@ -119,7 +159,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2px;
+    padding: 0 5px;
     border-radius: 4px;
     font-size: 1.5rem;
 }
@@ -145,9 +185,15 @@ body {
     color: rgb(255, 255, 68);
 }
 
+.health {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .h {
-    font-size: 1rem;
-    color: black;
+    font-size: 1.3rem;
+    color: #1A2B32;
     margin-right: 10px;
 }
 
@@ -159,10 +205,57 @@ body {
     align-items: center;
     width: 100%;
     height: 80%;
-    
 }
 
 .barre-vie p {
     font-size: 1rem;
     text-align: center;
+}
+
+#logo {
+    width: 64px;
+}
+
+.lieux {
+    max-width: 260px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2, 1fr;
+    grid-template-rows: 2, 1fr;
+    gap: 5px;
+}
+
+.lieux button {
+    width: 100%;
+    height: 100%;
+    color: #71583A;
+    background-color: #7C9BA5;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.lieux h4 {
+    color: #455D68;
+    height: 10px;
+}
+
+/* From Uiverse.io by SteveBloX */ 
+button {
+  width: 150px;
+  height: 60px;
+  border: 3px solid #7C9BA5;
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  font-size: 1.2em;
+  font-weight: 550;
+}
+
+button:hover {
+  background: #253A44;
+  color: white;
+  font-size: 1.5em;
 }
